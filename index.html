@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPS Drag Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>GPS Drag Timer</h1>
+    <p>Pilih jarak lalu tekan ARM. Timer otomatis berdasarkan GPS.</p>
+
+    <div class="controls">
+      <label for="distance">Jarak:</label>
+      <select id="distance">
+        <option value="201">201 meter</option>
+        <option value="402">402 meter</option>
+      </select>
+      <button id="armBtn">ARM (tunggu GPS)</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="status">
+      <div><strong>Status:</strong> <span id="status">idle</span></div>
+      <div><strong>Akurasi GPS:</strong> <span id="accuracy">—</span></div>
+      <div><strong>Jarak:</strong> <span id="distanceDisplay">0.00 m</span></div>
+      <div><strong>Waktu:</strong> <span id="time">0.000 s</span></div>
+      <div><strong>Kecepatan rata-rata:</strong> <span id="avgSpeed">—</span></div>
+      <div><strong>Kecepatan puncak:</strong> <span id="peakSpeed">—</span></div>
+    </div>
+
+    <div class="log">
+      <h3>Log</h3>
+      <pre id="logArea">Siap digunakan.</pre>
+    </div>
+
+    <footer class="small">Gunakan HP dan izinkan akses lokasi untuk akurasi terbaik.</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
